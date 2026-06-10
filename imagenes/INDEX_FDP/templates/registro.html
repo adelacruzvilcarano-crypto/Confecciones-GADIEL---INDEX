@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body class="bg-light">
+
+<a href="{{ url_for('inicio') }}" class="btn btn-light position-absolute top-0 start-0 m-3">
+    <i class="bi bi-arrow-left"></i> Salir
+</a>
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+
+    <div class="card shadow p-4" style="width: 350px; border-radius: 15px;">
+
+        <h3 class="text-center mb-4">Registro</h3>
+
+        <form method="POST">
+
+            <div class="mb-3">
+                <input type="text" name="usuario" class="form-control" placeholder="Usuario">
+            </div>
+
+            <div class="mb-3">
+                <input type="password" name="password" class="form-control" placeholder="Contraseña">
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+                Registrar
+            </button>
+
+        </form>
+
+        <p class="text-center mt-3">
+            ¿Ya tienes cuenta?
+            <a href="{{ url_for('login') }}">Inicia sesión</a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
